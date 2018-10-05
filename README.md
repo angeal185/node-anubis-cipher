@@ -8,7 +8,7 @@ const anubis = require('anubis');
 anubis.enc(password, data, iv)
 
 //decrypt
-anubis.enc(password, data)
+anubis.dec(password, data)
 
 //encrypt pbkf2
 anubis.encPbkf2(password, salt, iterations, keylen, data, iv)
