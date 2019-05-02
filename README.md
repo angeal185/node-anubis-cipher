@@ -1,5 +1,19 @@
-# node-anubis-cbc
+# node-anubis-cipher
 nodejs module for the anubis cipher in cbc mode with optional hmac authentication.
+
+### Installation
+
+npm
+
+```sh
+$ npm install node-anubis-cipher --save
+```
+
+git
+```sh
+$ git clone git@github.com:angeal185/node-anubis-cipher.git
+```
+
 
 ```js
 
@@ -68,6 +82,7 @@ anubis.decP(password, data, config)
 const anubis = require('node-anubis-cipher');
 
 (function(){
+
   let key = 'test';
   let options = {
     pbkdf2: true,
@@ -77,18 +92,22 @@ const anubis = require('node-anubis-cipher');
     buffer: [1,2]
   }
 
+  // callback
   console.log('anubis callback test starting...')
+
   anubis.enc(key, 'test', options, function(err, data){
-    if(err){return 'enc callback error';}
+    if(err){return console.log('enc callback error')}
     console.log(data)
     anubis.dec(key, data, options, function(err, data){
-      if(err){return 'dec callback error';}
+      if(err){return console.log('dec callback error')}
       console.log(data)
       console.log('anubis callback test done')
     })
   })
 
+  //sync
   console.log('anubis sync test starting...')
+
   let syncEnc = anubis.encSync(key, 'test', options);
   console.log(syncEnc)
   let syncDec = anubis.decSync(key, syncEnc, options)
@@ -101,7 +120,9 @@ const anubis = require('node-anubis-cipher');
     console.log('anubis sync test done.')
   }
 
+  // promise
   console.log('anubis promise test starting...')
+
   anubis.encP(key, 'test', options).then(function(res){
     console.log(res)
     anubis.decP(key, res, options).then(function(res){
