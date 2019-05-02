@@ -1,0 +1,26 @@
+{
+  "name": "node-anubis-cipher",
+  "version": "1.0.0",
+  "description": "nodejs module for the anubis cipher in cbc mode with optional hmac authentication.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angeal185/node-anubis-cipher.git"
+  },
+  "keywords": [
+    "anubis-cipher", "anubis", "encryption-decryption", "encryption", "decryption", "cipher", "cbc-mode", "hmac-authentication", "hmac", "nodejs"
+  ],
+  "author": "ben eaves",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angeal185/node-anubis-cipher/issues"
+  },
+  "homepage": "https://github.com/angeal185/node-anubis-cipher#readme"
+}
