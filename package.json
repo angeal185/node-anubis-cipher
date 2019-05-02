@@ -1,7 +1,7 @@
 {
   "name": "node-anubis-cipher",
   "version": "1.0.0",
-  "description": "nodejs module for the anubis cipher in cbc mode with optional hmac authentication.",
+  "description": "nodejs module for the anubis 256 bit cipher in cbc mode with optional hmac authentication.",
   "main": "index.js",
   "directories": {
     "lib": "lib",

@@ -1,5 +1,5 @@
 # node-anubis-cipher
-nodejs module for the anubis cipher in cbc mode with optional hmac authentication.
+nodejs module for the anubis 256 bit cipher in cbc mode with optional hmac authentication.
 
 ### Installation
 
